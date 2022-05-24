@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/64ed159049.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Test</title>
+  </head>
+  <body onload="show()">
+    <div class="container">
+      <div class="card">
+        <!-- Avatar -->
+        <div class="grid">
+          <div class="img-container">
+            <img
+              width="60px"
+              height="60px"
+              class="avatar"
+              src="./img/avatar.png"
+              alt="img-avatar"
+            />
+          </div>
+
+          <div>
+            <h4>Erik Dunlop</h4>
+            <p>San Francisco, California</p>
+          </div>
+        </div>
+        <!-- Inicio del carousel -->
+        <div>
+          <!-- Slider main container -->
+          <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div id="carousel" class="swiper-wrapper">
+              <!-- Slides -->
+              <!-- Aquí se agregan dinamicamente las imagenes del api -->
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div>
+        </div>
+
+        <!-- Iconos -->
+        <div class="container-icon">
+          <div class="like cont-like">
+            <div onclick="change()">
+              <img
+                id="heart1"
+                src="./img/icon/cora.png"
+                height="40px"
+                width="40px"
+                alt="heart-black"
+              />
+              <img
+                class="zoom-in-out-box"
+                id="heart2"
+                style="display: none"
+                src="./img/icon/heart_line.png"
+                height="40px"
+                width="40px"
+                alt="heart-black"
+              />
+            </div>
+          </div>
+          <div class="comment">
+            <img
+              src="./img/icon/bubble-chat.png"
+              alt="like"
+              width="40px"
+              height="40px"
+            />
+          </div>
+          <div class="share" style="align-self: center">
+            <img
+              style="align-self: center"
+              src="./img/icon/share.png"
+              alt="like"
+              width="30px"
+              height="30px"
+            />
+          </div>
+        </div>
+
+        <!-- Posted -->
+        <div style="width: 100%">
+          <div
+            class="container-fluid no-scrollbar"
+            id="container-fluid"
+            style="
+              overflow-x: hidden;
+              overflow-y: auto;
+              height: 200px;
+              word-break: break-all;
+              max-width: 100%;
+            "
+          ></div>
+        </div>
+
+        <!-- Input to post -->
+        <div class="container-post">
+          <div class="container-bg">
+            <div class="container-input">
+              <input
+                placeholder="consectetur adipiscing elit. Mi enim ut eu cras ultrices eget et"
+                class="input-post"
+                type="text"
+                name="post"
+                id="post"
+              />
+            </div>
+            <div class="container-button">
+              <a class="btn" onclick="handleAdd()"><b class="bold">Post</b></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+
+  <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+  <script src="./js/test.js"></script> 
+</html>
